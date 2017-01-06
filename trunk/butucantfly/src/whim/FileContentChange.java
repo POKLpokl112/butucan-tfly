@@ -20,7 +20,7 @@ public class FileContentChange {
 			}
 			reader.close();
 
-			final File csv = new File("d:\\aaaaqqq.csv");
+			final File csv = new File("d:\\" + file.getName() + ".csv");
 			final FileOutputStream out = new FileOutputStream(csv);
 
 			out.write(sb.toString().getBytes("gbk"));
@@ -41,7 +41,7 @@ public class FileContentChange {
 	}
 
 	public static void main(final String[] args) throws IOException {
-		changeFileContent(new File("d:\\pedaily_INV20170106122555.txt"));
+		changeFileContent(new File("d:\\pedaily_pcd20170106034608.txt"));
 
 	}
 
