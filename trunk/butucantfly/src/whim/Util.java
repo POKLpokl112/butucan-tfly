@@ -38,14 +38,23 @@ public class Util {
 	}
 
 	public static String find(final String source, final String regex) {
+		return parseRegex(source, regex, 1);
+	}
+
+	public static String findTheSame(final String source, final String regex) {
+		return parseRegex(source, regex, 0);
+	}
+
+	public static String parseRegex(final String source, final String regex, final int i) {
 		final Pattern p = Pattern.compile(regex);
 		final Matcher m = p.matcher(source);
 
-		return m.find() ? m.group(1) : null;
+		return m.find() ? m.group(i) : null;
 	}
 
 	public static void main(final String[] args) throws IOException {
-		System.out.println(readUsefulLog("more than one row!-----([^=]+=[^=]+)", "D:\\robot\\logs\\warn.log"));
+		System.out.println(findTheSame(") - more than one row!-----芜湖顺荣三七互娱网络科技股份有限公司=三七互娱",
+				"more than one row!-----([^=]+=[^=]+)"));
 	}
 
 }
