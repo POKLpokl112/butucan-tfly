@@ -1,0 +1,25 @@
+SELECT DISTINCT(data) from relativelycompanyname.relativelycompanyname group by data having count(data)>1
+
+ALTER table relativelycompanyname.relativelycompanyname add COLUMN comment VARCHAR(300);
+
+ALTER table relativelycompanyname.relativelycompanyname ALTER COLUMN comment VARCHAR(3000);
+
+select * from relativelycompanyname.relativelycompanyname where data in (SELECT DISTINCT(data) from relativelycompanyname.relativelycompanyname group by data having count(data)>1) order by data desc;
+
+select id,data,comment from relativelycompanyname.relativelycompanyname where id ='西安富士达科技股份有限公司' or data='富士达'
+
+select count(*) from relativelycompanyname.relativelycompanyname;
+
+select * from relativelycompanyname.relativelycompanyname where length(comment)>200;
+
+update relativelycompanyname.relativelycompanyname set comment='' where status
+
+ALTER TABLE relativelycompanyname.relativelycompanyname ALTER COLUMN comment text;
+
+ALTER TABLE relativelycompanyname.relativelycompanyname add COLUMN comment1 text;
+
+update relativelycompanyname.relativelycompanyname set comment1=comment;
+
+ALTER table relativelycompanyname.relativelycompanyname drop COLUMN comment;
+
+alter table relativelycompanyname.relativelycompanyname rename comment1 to comment;
