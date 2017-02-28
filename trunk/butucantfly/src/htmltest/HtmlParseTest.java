@@ -48,7 +48,7 @@ public class HtmlParseTest extends HtmlParseFromLocalFile {
 	}
 
 	public static void main(final String[] args) {
-		final Object obj = new HtmlParseTest().readFile("D://robot//test.html");
+		final Object obj = new HtmlParseTest().readFile();
 		System.out.println(obj);
 
 	}

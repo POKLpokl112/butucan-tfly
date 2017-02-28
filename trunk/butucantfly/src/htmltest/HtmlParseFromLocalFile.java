@@ -25,9 +25,9 @@ public abstract class HtmlParseFromLocalFile {
 
 	public abstract Object doSomething(final Html html);
 
-	public Object readFile(final String fileName) {
+	public Object readFile() {
 
-		final String content = Util.loadFromFile(new File(fileName));
+		final String content = Util.loadFromFile(new File("D://robot//test.html"));
 
 		final Html html = new Html(content);
 
