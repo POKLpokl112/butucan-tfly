@@ -9,7 +9,6 @@ import common.db.KVSqlUpdater.Entry;
 import common.db.KVSqlUpdater.EntryRunnable;
 import common.db.NoSqlUpdater;
 import common.db.SqlUpdater;
-import constant._Config;
 
 public class MakeDataUpdate {
 

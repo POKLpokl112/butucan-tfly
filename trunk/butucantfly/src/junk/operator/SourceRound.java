@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import common.Util;
 import common.db.NoSqlUpdater;
-import constant._Config;
+import funny._Config;
 
 public class SourceRound {
 

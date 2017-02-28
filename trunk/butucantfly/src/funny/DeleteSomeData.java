@@ -3,7 +3,6 @@ package funny;
 import java.sql.SQLException;
 
 import common.db.NoSqlUpdater;
-import constant._Config;
 
 public class DeleteSomeData {
 

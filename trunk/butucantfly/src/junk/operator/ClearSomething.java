@@ -8,7 +8,7 @@ import common.db.KVSqlUpdater;
 import common.db.KVSqlUpdater.Entry;
 import common.db.KVSqlUpdater.EntryRunnable;
 import common.db.NoSqlUpdater;
-import constant._Config;
+import funny._Config;
 
 public class ClearSomething {
 	public static void clearPEDAILY() throws SQLException {

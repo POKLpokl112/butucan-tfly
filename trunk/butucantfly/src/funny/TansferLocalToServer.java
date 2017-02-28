@@ -10,7 +10,6 @@ import common.db.KVSqlUpdater;
 import common.db.KVSqlUpdater.Entry;
 import common.db.KVSqlUpdater.EntryRunnable;
 import common.db.NoSqlUpdater;
-import constant._Config;
 
 public class TansferLocalToServer {
 
