@@ -9,8 +9,9 @@ import common.Util;
 import us.codecraft.webmagic.selector.Html;
 import us.codecraft.webmagic.selector.Selectable;
 
-public class HtmlParseTest extends HtmlParseFromLocalFile {
+public class HtmlParseTestAHH extends HtmlParseFromLocalFile {
 
+	// HBW\hlj\hnh\hnz
 	@Override
 	public Object doSomething(final Html html) {
 		final JSONArray array = new JSONArray();
@@ -24,6 +25,11 @@ public class HtmlParseTest extends HtmlParseFromLocalFile {
 		for (final Selectable div : divs) {
 
 			final JSONObject data = new JSONObject();
+
+			final String URL = "http://hb.gsxt.gov.cn/business/JCXX.jspx?id=" + div.xpath("//div/@data-label").get();
+			final String id = div.xpath("//div/@data-label-id").get();
+			data.put("URL", URL);
+			data.put("id", id);
 
 			final Selectable p1 = div.xpath("//div/p[1]");
 			final String p1String = p1.toString();
@@ -48,7 +54,7 @@ public class HtmlParseTest extends HtmlParseFromLocalFile {
 	}
 
 	public static void main(final String[] args) {
-		final Object obj = new HtmlParseTest().readFile();
+		final Object obj = new HtmlParseTestAHH().readFile();
 		System.out.println(obj);
 
 	}

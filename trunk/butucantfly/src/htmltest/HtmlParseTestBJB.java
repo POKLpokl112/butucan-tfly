@@ -7,7 +7,7 @@ import common.Util;
 import us.codecraft.webmagic.selector.Html;
 import us.codecraft.webmagic.selector.Selectable;
 
-//GXN
+//GXN\xjw
 public class HtmlParseTestBJB extends HtmlParseFromLocalFile {
 
 	@Override

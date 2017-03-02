@@ -23,7 +23,9 @@ public abstract class HtmlParseFromLocalFile {
 	// return INSTANCE;
 	// }
 
-	public abstract Object doSomething(final Html html);
+	public Object doSomething(final Html html) {
+		throw new IllegalArgumentException();
+	}
 
 	public Object readFile() {
 
@@ -32,6 +34,17 @@ public abstract class HtmlParseFromLocalFile {
 		final Html html = new Html(content);
 
 		return doSomething(html);
+	}
+
+	public Object readFile2() {
+
+		final String content = Util.loadFromFile(new File("D://robot//test.html"));
+
+		return doSomething(content);
+	}
+
+	public Object doSomething(final String pageContent) {
+		throw new IllegalArgumentException();
 	}
 
 	public static void main(final String[] args) {

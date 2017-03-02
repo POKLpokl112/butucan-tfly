@@ -9,6 +9,7 @@ import us.codecraft.webmagic.selector.Selectable;
 
 public class HtmlParseTestGDG extends HtmlParseFromLocalFile {
 
+	// nmg
 	@Override
 	public Object doSomething(final Html html) {
 		final JSONArray array = new JSONArray();
@@ -19,7 +20,7 @@ public class HtmlParseTestGDG extends HtmlParseFromLocalFile {
 		for (final Selectable div : html.xpath("//div[@class='mianBodyStyle']/div[@class='clickStyle']").nodes()) {
 			final JSONObject data = new JSONObject();
 
-			final String URL = div.xpath("//div/div[1]/a/@href").get();
+			final String URL = getURL(div.xpath("//div/div[1]/a/@href").get());
 			data.put("URL", URL);
 
 			final String companyName = Util.normalizeRawText(div.xpath("//div/div[1]/a").toString());
@@ -37,6 +38,13 @@ public class HtmlParseTestGDG extends HtmlParseFromLocalFile {
 
 		return array;
 
+	}
+
+	protected String getURL(final String URL) {
+		if (URL.startsWith("../")) {
+			return URL.replace("../", "http://gd.gsxt.gov.cn/");
+		}
+		return URL;
 	}
 
 	public static void main(final String[] args) {
