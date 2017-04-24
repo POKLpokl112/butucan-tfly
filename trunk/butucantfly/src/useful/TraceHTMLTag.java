@@ -10,6 +10,8 @@ public class TraceHTMLTag {
 		final String a = "<table" + Util.parseRegex(s, "企业年报信息[\\s\\S]*?<table([\\s\\S]*?)/table>") + "/table>";
 		final Html html = new Html(a);
 		System.out.println(html);
+
+		System.out.println("116".matches("^(\\-|\\+?)\\d+\\.?\\d*"));
 	}
 
 }
